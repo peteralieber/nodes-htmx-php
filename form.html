@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Form</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <div class="simple-form">
+        <h1>Enter Your Information</h1>
+        <form action="action.php" method="post" 
+              hx-post="action.php" 
+              hx-target="#response" 
+              hx-swap="innerHTML">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div id="response">
+        
+    </div>
+</body>
+</html>
